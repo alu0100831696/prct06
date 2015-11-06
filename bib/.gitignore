@@ -4,6 +4,16 @@
 /_yardoc/
 /coverage/
 /doc/
+/rdoc/
 /pkg/
 /spec/reports/
 /tmp/
+*.gem
+*.rbc
+/.config
+/test/tmp/
+.dat*
+
+/.bundle/
+/vendor/bundle
+/lib/bundler/man/
