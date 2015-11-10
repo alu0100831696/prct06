@@ -1,7 +1,7 @@
 #Andrea Pérez Quintana
 
 require 'spec_helper'
-require 'bib'
+require 'bib/bib_cod'
 
 describe Bib do
  
@@ -30,31 +30,33 @@ describe Bib do
   describe "# Debe existir" do
    
     it "Uno o más autores" do
-        @object1.get_autor.length.should_not be 0  # Longitud de Autor no debe ser cero.
+        expect(@object1.get_autor.length).to_not be 0  # Longitud de Autor no debe ser cero. spe
+     
+      
     end
    
     it "Un título" do
-      @object1.get_titulo.length.should_not be 0  
+       expect(@object1.get_titulo.length).to_not be 0  
     end
    
     it "O no una serie" do
-      @object1.get_serie.should_not be 'V'  # V = vacío.
+       expect(@object1.get_serie).to_not be 'V'  # V = vacío.
     end
     
     it "Una editorial" do
-      @object1.get_serie.length.should_not be 0
+       expect(@object1.get_serie.length).to_not be 0
     end
    
     it "Una edición" do
-      @object1.get_edicion.length.should_not be 0
+       expect(@object1.get_edicion.length).to_not be 0
     end
    
     it "Una fecha" do
-      @object1.get_fecha.length.should_not be 0
+      expect(@object1.get_fecha.length).to_not be 0
     end
    
     it "Uno o más ISBN" do
-      @object1.get_isbn.length.should_not be 0 
+       expect(@object1.get_isbn.length).to_not be 0 
     end
   end
 end
